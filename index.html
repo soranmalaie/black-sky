@@ -5,7 +5,6 @@
         <script src="https://unpkg.com/jspsych@7.3.1"></script>
         <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
         <script src="https://unpkg.com/@jspsych/plugin-html-audio-response@1.0.2"></script>
-        
 
         <link href="https://unpkg.com/jspsych@7.3.1/css/jspsych.css" rel="stylesheet" type="text/css" />
     </head>
@@ -24,18 +23,11 @@
 
         var greeting_test = {
             type: jsPsychHtmlKeyboardResponse,
-            stimulus: "Welcome to this testing experiment",
+            stimulus: "Weeeeeeeelcome to this testing experiment",
         };
         timeline.push(greeting_test);
 
-        var trial = {
-    type: jsPsychHtmlAudioResponse,
-    stimulus: `
-    <p style="font-size:48px; color:red;">GREEN</p>
-    <p>Speak the color of the ink.</p>`,
-    recording_duration: 3500
-};
-
+        
         // var trial = {
         //             type: jsPsychHtmlAudioResponse,
         //             stimulus: `
@@ -50,7 +42,7 @@
         //             //   data.response = filename;
         //             // }
         //           };
-        timeline.push(trial);
+        // timeline.push(trial);
 
         jsPsych.run(timeline);
 
