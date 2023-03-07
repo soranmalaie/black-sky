@@ -23,26 +23,24 @@
 
         var greeting_test = {
             type: jsPsychHtmlKeyboardResponse,
-            stimulus: "Weeeeeeeelcome to this testing experiment",
+            stimulus: " to this testing experiment",
         };
         timeline.push(greeting_test);
 
         
-        // var trial = {
-        //             type: jsPsychHtmlAudioResponse,
-        //             stimulus: `
-        //                 <p>Please record a few seconds of audio and click the button when you are done.</p>
-        //             `,
-        //             recording_duration: 15000,
-        //             allow_playback: true,
-        //             // on_finish: function(data){
-        //             //   const filename = `${subject_id}_${jsPsych.getProgress().current_trial_global}_audio.webm`;
-        //             //   jsPsychPipe.saveBase64Data("ZgNOhrfaWdyb",  filename, data.response);
-        //             //   // delete the base64 data to save space. store the filename instead.
-        //             //   data.response = filename;
-        //             // }
-        //           };
-        // timeline.push(trial);
+        var trial = {
+                    type: jsPsychHtmlAudioResponse,
+                    stimulus: "<p>Please record a few seconds of audio and click the button when you are done.</p>",
+                    recording_duration: 10000,
+                    allow_playback: true,
+                    // on_finish: function(data){
+                    //   const filename = `${subject_id}_${jsPsych.getProgress().current_trial_global}_audio.webm`;
+                    //   jsPsychPipe.saveBase64Data("ZgNOhrfaWdyb",  filename, data.response);
+                    //   // delete the base64 data to save space. store the filename instead.
+                    //   data.response = filename;
+                    // }
+                  };
+        timeline.push(trial);
 
         jsPsych.run(timeline);
 
